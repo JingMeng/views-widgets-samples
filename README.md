@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 > **Warning**
 > We are in the process of migrating these samples into the new [platform-samples repository](https://github.com/android/platform-samples).
 > 
