@@ -16,16 +16,18 @@
 
 package com.google.androidstudio.motionlayoutexample
 
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 
 class DemosAdapter(private val dataset: Array<DemosAdapter.Demo>) :
         RecyclerView.Adapter<DemosAdapter.ViewHolder>() {
 
-    data class Demo(val title: String, val description : String, val layout : Int = 0, val activity : Class<*> = DemoActivity::class.java) {
+    data class Demo constructor(val title: String, val description : String, val layout : Int = 0, val activity : Class<*> = DemoActivity::class.java) {
         constructor(title: String, description: String, activity : Class<*> = DemoActivity::class.java) : this(title, description, 0, activity)
     }
 
