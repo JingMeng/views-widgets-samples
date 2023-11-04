@@ -1059,27 +1059,27 @@ public class ConstraintSetParser {
     }
 
     /**
-     * It's used to parse the Flow type of Helper with the following format:
-     * flowID: {
-     *    type: 'hFlow'|'vFlow’
-     *    wrap: 'chain'|'none'|'aligned',
-     *    contains: ['id1', 'id2', 'id3' ] |
-     *              [['id1', weight, preMargin , postMargin], 'id2', 'id3'],
-     *    vStyle: 'spread'|'spread_inside'|'packed' | ['first', 'middle', 'last'],
-     *    hStyle: 'spread'|'spread_inside'|'packed' | ['first', 'middle', 'last'],
-     *    vAlign: 'top'|'bottom'|'baseline'|'center',
-     *    hAlign: 'start'|'end'|'center',
-     *    vGap: 32,
-     *    hGap: 23,
-     *    padding: 32,
-     *    maxElement: 5,
-     *    vBias: 0.3 | [0.0, 0.5, 0.5],
-     *    hBias: 0.4 | [0.0, 0.5, 0.5],
-     *    start: ['parent', 'start', 0],
-     *    end: ['parent', 'end', 0],
-     *    top: ['parent', 'top', 0],
-     *    bottom: ['parent', 'bottom', 0],
-     * }
+     ** It's used to parse the Flow type of Helper with the following format:
+     ** flowID: {
+     **    type: 'hFlow'|'vFlow'
+     **    wrap: 'chain'|'none'|'aligned',
+     **    contains: ['id1', 'id2', 'id3' ] |
+     **              [['id1', weight, preMargin , postMargin], 'id2', 'id3'],
+     **    vStyle: 'spread'|'spread_inside'|'packed' | ['first', 'middle', 'last'],
+     **    hStyle: 'spread'|'spread_inside'|'packed' | ['first', 'middle', 'last'],
+     **    vAlign: 'top'|'bottom'|'baseline'|'center',
+     **    hAlign: 'start'|'end'|'center',
+     **    vGap: 32,
+     **    hGap: 23,
+     **    padding: 32,
+     **    maxElement: 5,
+     **    vBias: 0.3 | [0.0, 0.5, 0.5],
+     **    hBias: 0.4 | [0.0, 0.5, 0.5],
+     **    start: ['parent', 'start', 0],
+     **    end: ['parent', 'end', 0],
+     **    top: ['parent', 'top', 0],
+     **    bottom: ['parent', 'bottom', 0],
+     ** }
      *
      * @param flowType orientation of the Flow Helper
      * @param state ConstraintLayout State
