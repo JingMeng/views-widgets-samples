@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2022 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,8 +14,15 @@
  * limitations under the License.
  */
 
-include ':constraintlayout-basic'
-include 'motionlayout'
-include ':motionlayoutintegrations'
-include ':core'
-include ':constraintlayout'
+package androidx.constraintlayout.compose
+
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.layoutId
+import androidx.compose.ui.platform.testTag
+
+/**
+ * Applies the [id] to the [layoutId] and [testTag] Modifiers.
+ *
+ * This allows using syntax such as: `rule.onNodeWithTag(id)...`
+ */
+internal fun Modifier.layoutTestId(id: Any): Modifier = testTag(id.toString()).layoutId(id)

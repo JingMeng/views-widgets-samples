@@ -1,0 +1,15 @@
+plugins {
+    id 'androidx.build.java-library'
+    id 'androidx.build.publishing'
+}
+
+globalConfig {
+    pomName = 'Android ConstraintLayout Core'
+    pomDescription = 'ConstraintLayout core'
+}
+
+dependencies {
+    api("androidx.annotation:annotation:1.5.0")
+    testImplementation "junit:junit:4.13.1"
+}
+

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,9 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package androidx.constraintlayout.motion.widget;
 
-include ':constraintlayout-basic'
-include 'motionlayout'
-include ':motionlayoutintegrations'
-include ':core'
-include ':constraintlayout'
+/**
+ * Interface to custom float attributes
+ *
+ */
+public interface CustomFloatAttributes {
+    /**
+     * Get list of attributes
+     * @return
+     */
+    String[]getListOfAttributes();
+
+    /**
+     * set the attributes
+     * @param attribute
+     * @param value
+     */
+    void set(String attribute, float value);
+
+    /**
+     * get the value of the attributes
+     * @param attribute
+     * @return
+     */
+    float get(String attribute);
+}

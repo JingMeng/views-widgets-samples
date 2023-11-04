@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2019 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-include ':constraintlayout-basic'
-include 'motionlayout'
-include ':motionlayoutintegrations'
-include ':core'
-include ':constraintlayout'
+package androidx.constraintlayout.core.widgets.analyzer;
+
+public interface Dependency {
+    // @TODO: add description
+    void update(Dependency node);
+}

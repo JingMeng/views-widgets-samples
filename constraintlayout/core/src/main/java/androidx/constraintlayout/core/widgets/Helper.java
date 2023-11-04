@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,9 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package androidx.constraintlayout.core.widgets;
 
-include ':constraintlayout-basic'
-include 'motionlayout'
-include ':motionlayoutintegrations'
-include ':core'
-include ':constraintlayout'
+/**
+ * interface to virtual objects
+ */
+
+public interface Helper {
+    // @TODO: add description
+    void updateConstraints(ConstraintWidgetContainer container);
+
+    // @TODO: add description
+    void add(ConstraintWidget widget);
+
+    // @TODO: add description
+    void removeAllIds();
+}

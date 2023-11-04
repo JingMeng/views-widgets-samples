@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,9 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package androidx.constraintlayout.core.motion.utils;
 
-include ':constraintlayout-basic'
-include 'motionlayout'
-include ':motionlayoutintegrations'
-include ':core'
-include ':constraintlayout'
+public class FloatRect {
+    public float bottom;
+    public float left;
+    public float right;
+    public float top;
+
+    // @TODO: add description
+    public final float centerX() {
+        return (left + right) * 0.5f;
+    }
+
+    // @TODO: add description
+    public final float centerY() {
+        return (top + bottom) * 0.5f;
+    }
+
+}

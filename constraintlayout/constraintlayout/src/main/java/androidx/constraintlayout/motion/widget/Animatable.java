@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,9 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package androidx.constraintlayout.motion.widget;
 
-include ':constraintlayout-basic'
-include 'motionlayout'
-include ':motionlayoutintegrations'
-include ':core'
-include ':constraintlayout'
+/**
+ * A helper interface allowing MotionLayout to directly drive custom views
+ */
+public interface Animatable {
+    /**
+     * Set the progress
+     * @param progress
+     */
+    void setProgress(float progress);
+
+    /**
+     * get the progress
+     * @return
+     */
+    float getProgress();
+}

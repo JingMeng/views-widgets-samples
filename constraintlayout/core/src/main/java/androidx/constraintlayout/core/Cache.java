@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2016 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,9 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package androidx.constraintlayout.core;
 
-include ':constraintlayout-basic'
-include 'motionlayout'
-include ':motionlayoutintegrations'
-include ':core'
-include ':constraintlayout'
+/**
+ * Cache for common objects
+ */
+public class Cache {
+    Pools.Pool<ArrayRow> mOptimizedArrayRowPool = new Pools.SimplePool<>(256);
+    Pools.Pool<ArrayRow> mArrayRowPool = new Pools.SimplePool<>(256);
+    Pools.Pool<SolverVariable> mSolverVariablePool = new Pools.SimplePool<>(256);
+    SolverVariable[] mIndexedVariables = new SolverVariable[32];
+}

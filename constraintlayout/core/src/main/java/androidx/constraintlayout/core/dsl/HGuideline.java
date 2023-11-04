@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2022 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,8 +14,18 @@
  * limitations under the License.
  */
 
-include ':constraintlayout-basic'
-include 'motionlayout'
-include ':motionlayoutintegrations'
-include ':core'
-include ':constraintlayout'
+package androidx.constraintlayout.core.dsl;
+
+class HGuideline extends Guideline {
+    public HGuideline(String name) {
+        super(name);
+        type = new HelperType(typeMap.get(Type.HORIZONTAL_GUIDELINE));
+    }
+
+    public HGuideline(String name, String config) {
+        super(name);
+        this.config = config;
+        type = new HelperType(typeMap.get(Type.HORIZONTAL_GUIDELINE));
+        configMap = convertConfigToMap();
+    }
+}
